@@ -1,0 +1,86 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+aside {
+    background-color: #121212;
+}
+
+.top-section {
+    background-image: linear-gradient(180deg, #ff7e53 0, #ff664e 25%, #f94646 50%, #ea1640 75%, #dd0040 100%);
+    height: fit-content;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.left-arrow, .right-arrow, .notification, .groups, .profile  {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, 0.459);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-arrow, .right-arrow, .notification, .groups, .profile i {
+    font-size: 1.2em;
+}
+
+.left-arrow:hover, .right-arrow:hover, .notification:hover, .groups:hover, .profile:hover  {
+    background-color: black;
+}
+
+.album-cover img{
+    border-radius: 5px;
+}
+
+.album-info p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.album-info h1 {
+    font-size: 5em;
+    font-weight: bold;
+}
+
+.artist-image img {
+    border-radius: 20px;
+}
+
+.artist-text a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+.song-container {
+    background-color: #121212;
+}
+
+.top-play {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    background-color: #19D760;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-play i {
+    color: black;
+    font-size: 1.7em;
+}
+
+.shuffle i, .add i, .download i, .more i {
+    font-size: 1.7em;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.547);
+}
+
+.right-player-section i {
+    font-size: 1.3em;
+}
