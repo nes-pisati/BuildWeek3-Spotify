@@ -26,7 +26,47 @@
             <div class="container-fluid p-0 ">
                 <div class="row gap-1 ">
                     <aside class="col-md-2 mt-4 ms-2 d-sm-none d-lg-flex ms-4"> 
-
+                        <!--<div class="top-aside mb-2 p-3 rounded-3 d-flex flex-column gap-3">
+                            <div class="d-flex gap-3"><i class="bi bi-house-door-fill"></i> Home</div>
+                            <div class="d-flex gap-3"><i class="bi bi-search"></i> Search</div>
+                        </div>
+                        <div class="sub-aside mb-2 p-3 rounded-3 d-flex flex-column gap-3 vh-100 ">
+                            <div class="d-flex justify-content-between ">
+                                <div class="d-flex gap-3"><i class="bi bi-collection"></i> Your library</div>
+                                <div class="d-flex gap-3"><i class="bi bi-plus"></i><i class="bi bi-arrow-right-short"></i>
+                                </div>
+                            </div>
+                            <div>
+                                <button class="aside-btn">Playlists</button>
+                                <button class="aside-btn">Artists</button>
+                                <button class="aside-btn">Albums</button>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <div><i class="bi bi-search"></i></div>
+                                <div class="d-flex gap-3">Recents <i class="bi bi-list-task"></i></div>
+                            </div>
+                            <div class="aside-card d-flex gap-2">
+                                <div><img src="https://picsum.photos/40" alt="playlist-logo" class="rounded-1"></div>
+                                <div class="aside-card-text">
+                                    <h6 class="m-0 ">Lorem ipsum</h6>
+                                    <p class="m-0 ">Lorem, ipsum &#8901; Spotify</p>
+                                </div>
+                            </div>
+                            <div class="aside-card d-flex gap-2">
+                                <div><img src="https://picsum.photos/40" alt="playlist-logo" class="rounded-1"></div>
+                                <div class="aside-card-text">
+                                    <h6 class="m-0 ">Lorem ipsum</h6>
+                                    <p class="m-0 ">Lorem, ipsum &#8901; Spotify</p>
+                                </div>
+                            </div>
+                            <div class="aside-card d-flex gap-2">
+                                <div><img src="https://picsum.photos/40" alt="playlist-logo" class="rounded-1"></div>
+                                <div class="aside-card-text">
+                                    <h6 class="m-0 ">Lorem ipsum</h6>
+                                    <p class="m-0 ">Lorem, ipsum &#8901; Spotify</p>
+                                </div>
+                            </div>
+                        </div>-->
                     </aside>
                     <div class="album-container col-md-9  mt-4 ">
                         <div class="top-section pb-4">
@@ -53,23 +93,22 @@
                                 </div>
                             </div>
                             <!--Album Info-->
-                            <div class="album-presentation row ps-3 pt-4 align-items-baseline ">
+                            <div class="album-presentation row ps-3 pt-4 align-items-center ">
 
                                 <div class="album-cover col-md-3 col-6">
-                                    <img src="https://picsum.photos/270" alt="album cover">
+                                    <img src="https://picsum.photos/270" alt="album cover" id="albumCover">
                                 </div>
 
-                                <div class="album-info col-md-9 col-10">
+                                <div class="album-info col-md-9 col-10 ps-4">
                                     <p>Album</p>
-                                    <h1>Album Title</h1>
-
+                                    <h1 id="albumTitle"></h1>
                                     <div class="artist-info d-flex gap-2 align-items-center ">
                                         <div class="artist-image">
                                             <img src="https://picsum.photos/30" alt="artist-image">
                                         </div>
-                                        <div class="artist-text d-flex ">
-                                           <a href="#">Artist Name</a>
-                                           <p>• 2024 •</p>
+                                        <div class="artist-text d-flex align-items-center ">
+                                           <a href="#" id="artistName"></a>
+                                           <p class="mx-1">• 2024 •</p>
                                            <p>8 brani, 29min 4sec</p>
                                         </div>
                                     </div>
@@ -79,7 +118,7 @@
                         <!--Song List-->
                         <div class="song-container pt-4 ps-3 pe-3">
                             <div class="player d-flex justify-content-between align-items-center ">
-                                <div class="left-player-section d-flex gap-4">
+                                <div class="left-player-section d-flex gap-4 align-items-center ">
                                     <div class="top-play">
                                         <i class="bi bi-play-fill"></i>
                                     </div>
@@ -101,7 +140,21 @@
                                     <i class="bi bi-list-task"></i>
                                 </div>
                             </div>
-                            <div class="song-list"></div>
+                            <div class="song-list">
+                                <table class="table table-dark mt-4">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col-1">#</th>
+                                        <th scope="col">Titolo</th>
+                                        <th scope="col">Riproduci</th>
+                                        <th scope="col"><i class="bi bi-clock"></i></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id="songContainer">
+
+                                    </tbody>
+                                  </table>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -122,5 +175,8 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+
+        <!--<script src="./js/shared.js"></script>-->
+        <script src="./js/album.js"></script>
     </body>
 </html>

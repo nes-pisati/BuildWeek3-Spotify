@@ -60,6 +60,10 @@ aside {
     background-color: #121212;
 }
 
+.table-dark {
+    --bs-table-bg: transparent
+}
+
 .top-play {
     width: 55px;
     height: 55px;
@@ -84,3 +88,24 @@ aside {
 .right-player-section i {
     font-size: 1.3em;
 }
+
+.list-song-title {
+    font-size: 1.1em;
+}
+
+.list-artist-name {
+    font-size: 0.8em;
+    color: rgba(255, 255, 255, 0.606);
+}
+
+audio::-webkit-media-controls-panel {
+    background-color:  #19D760;
+}
+
+
+audio::-webkit-media-controls-play-button {
+    background-color: white;
+    border-radius: 50%;
+}
+
+
