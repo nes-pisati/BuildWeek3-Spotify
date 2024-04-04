@@ -1,0 +1,82 @@
+:root {
+    --background-color: #191414;
+    --section-bg-color: #202020;
+    --text-color: #ffffff;
+    --logo-color: #1db954;
+    --grey-text: #2A2A2A;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-aside,
+.sub-aside {
+    background-color: var(--section-bg-color);
+}
+
+.aside-btn {
+    border: none;
+    border-radius: 50px;
+    font-size: small;
+    background-color: var(--grey-text);
+    color: var(--text-color);
+}
+
+.aside-card-text {
+    font-size: 12px;
+}
+
+.img-header {
+    position: relative;
+}
+
+.arrow-img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgb(22, 22, 28);
+    background: radial-gradient(circle, rgba(22, 22, 28, 0.9682466736694678) 0%, rgba(97, 97, 97, 0) 100%, rgba(0, 212, 255, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.notification-icons{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 90px; 
+    height: 30px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.bi-arrow-right-short {
+    left: 50px;
+}
+
+h1 {
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+}
+
+aside {
+   
+    height: 100vh; /* Imposta l'altezza al 100% della viewport */
+    overflow: scroll; /* Nasconde lo scroll */
+}
+
+main {
+    overflow: auto; /* Abilita lo scroll se necessario */
+}
