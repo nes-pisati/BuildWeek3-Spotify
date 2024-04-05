@@ -1,0 +1,58 @@
+:root {
+    --background-color: #191414;
+    --section-bg-color: #202020;
+    --text-color: #ffffff;
+    --logo-color: #1db954;
+    --grey-text: #2A2A2A;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.top-aside,
+.sub-aside {
+    background-color: var(--section-bg-color);
+}
+
+.aside-btn {
+    border: none;
+    border-radius: 50px;
+    font-size: small;
+    background-color: var(--grey-text);
+    color: var(--text-color);
+}
+
+.aside-card-text {
+    font-size: 12px;
+}
+
+.link-text {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+#searchField,
+#searchBtn {
+    border-radius: 30px;
+    border: none;
+}
+
+.main-content {
+    background-color: var(--background-color);
+}
+
+.playlist-card h6,p {
+    margin: 0;
+    font-size: small;
+}
+
+.footer {
+    background-color: var(--background-color);
+}
+
+.transition {
+    background-color: red;
+}
