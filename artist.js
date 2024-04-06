@@ -1,22 +1,43 @@
-const ARTIST_ENDPOINT_URL = "https://striveschool-api.herokuapp.com/api/deezer/artist/13"
+
+//const ALBUMS_ENDPOINT_URL = 
 const searchParams = new URLSearchParams(location.search)
-const artistId = searchParams.get('id')
+const artistId = searchParams.get('artistid')
+const ARTIST_ENDPOINT_URL = `https://striveschool-api.herokuapp.com/api/deezer/artist/13`;
 let songs = [];
 
 console.table({ artistId })
 
 window.onload = async () => {
-    const url = ARTIST_ENDPOINT_URL + String(artistId)
+    //if (!artistId){
+      //  console.error('No artist id provided')
+      //  return;
+    //}
 
-    const response = await fetch(url)
-    const data = await response.json()
+    const artistData = await getArtistDataById();
+    const trackListData = await getTrakListFromId(artistData.tracklist);
 
-    console.log(data);
+    showArtistData(artistData);
+    console.log(trackListData);
+    trackListData.data.slice(0,5).map((track) => {
+    showTrackArtist(track);
+   })
+    //console.log(trackListData);
+    
+}
 
-    showArtistData(data);
-    showTrackArtist(data);
+async function getArtistDataById(){
+    const artistUrl = ARTIST_ENDPOINT_URL;
+    const artistResponse = await fetch(artistUrl);
+    const artistData = await artistResponse.json();
+    //console.log(artistData);
+    return artistData;
+}
 
-
+async function getTrakListFromId(trackListUrl){
+    const trackListResponse = await fetch(trackListUrl);
+    const trackListData = await trackListResponse.json();
+    //console.log(trackListData);
+    return trackListData;
 }
 
 function showArtistData(data) {
@@ -26,10 +47,8 @@ function showArtistData(data) {
 
 function showTrackArtist(data) {
     let container = document.querySelector('.container-track-artist'); 
-
-    for (let i = 0; i < 5; i++) 
-    {
-        let song = data[i];
+   
+        let song = data;
 
         let songElement = document.createElement('div');
         songElement.className = 'd-flex justify-content-between align-items-center text-white p-2';
@@ -39,10 +58,10 @@ function showTrackArtist(data) {
 
         let songNumber = document.createElement('span');
         songNumber.className = 'me-2';
-        songNumber.textContent = i + 1;
+        //songNumber.textContent = i + 1;
 
         let coverImage = document.createElement('img');
-        coverImage.src = data.picture_small;
+        coverImage.src = song.picture_small;
         coverImage.alt = 'Cover';
         coverImage.className = 'img-fluid me-2';
         coverImage.style.width = '40px';
@@ -50,7 +69,7 @@ function showTrackArtist(data) {
 
         let songTitle = document.createElement('span');
         songTitle.className = 'flex-grow-1 text-white';
-        songTitle.innerHTML = data.title_short;
+        songTitle.innerHTML = song.title_short;
 
         leftDiv.append(songNumber, coverImage, songTitle);
 
@@ -59,15 +78,22 @@ function showTrackArtist(data) {
 
         let songPlays = document.createElement('span');
         songPlays.className = 'mx-2';
-        songPlays.innerHTML = data.rank;
+        songPlays.innerHTML = song.rank;
 
         let songDuration = document.createElement('span');
-        songDuration.innerHTML = data.duration;
+        songDuration.innerHTML = song.duration;
 
         rightDiv.append(songPlays, songDuration);
 
         songElement.append(leftDiv, rightDiv);
 
         container.append(songElement);
-    }
+    
+    
+}
+
+
+function showAlbums(AlbumData) {
+    // qui devo sviluppare la logicca della funziona che crea la card album 
+    
 }
