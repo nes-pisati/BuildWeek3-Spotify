@@ -43,6 +43,8 @@ async function getTrakListFromId(trackListUrl){
 function showArtistData(data) {
     const artistName = document.querySelector("h1");
     artistName.innerText = data.name;
+    const artisrImage = documenti.querySelector("img-artist");
+    artisrImage.src = data.picture_big;
 }
 
 function showTrackArtist(data) {
@@ -93,7 +95,32 @@ function showTrackArtist(data) {
 }
 
 
-function showAlbums(AlbumData) {
+function showAlbums(albumData) {
     // qui devo sviluppare la logicca della funziona che crea la card album 
-    
+    document.querySelector('.album-container').innerHTML =  '';
+    document.querySelector('.card-title').textContent = albumData.title;
+    document.querySelector('.card-img-top').src = albumData.cover_medium;
+    document.querySelector('.card-text').textContent = albumData.year;
+    document.querySelector('.type-of-album').textContent = albumData.record_type;
+
+    //console.log(albumData);
+
+    const albumContainer = document.querySelector('.album-container');
+    albumData.data.map((album) => {
+        let albumCard = document.createElement('div');
+        albumCard.className = 'card';
+        albumCard.style.width = '18rem';
+        albumCard.style.margin = '10px';
+
+        albumCard.innerHTML = `
+        <img src="${album.cover_medium}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${album.title}</h5>
+            <p class="card-text">${album.release_date}</p>
+            <a href="album.html?albumid=${album.id}" class="btn btn-primary">Go to Album</a>
+        </div>
+        `;
+
+        albumContainer.appendChild(albumCard);
+    });
 }
