@@ -21,6 +21,7 @@ window.onload = async () => {
     trackListData.data.slice(0,5).map((track) => {
     showTrackArtist(track);
    })
+    showAlbums(albumData);
     //console.log(trackListData);
     
 }
