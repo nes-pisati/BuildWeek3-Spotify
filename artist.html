@@ -122,17 +122,34 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid footer position-sticky bottom-0 ">
-        <div class="row">
-            <div class="col-12 d-flex justify-content-around align-items-center">
+    <div class="container-fluid footer position-fixed bottom-0 bg-dark text-light">
+        <div class="row py-2">
+            <!-- Sezione informazioni brano -->
+            <div class="col-4 d-flex align-items-center">
+                <img src="path_to_album_cover.jpg" alt="Copertina album" class="me-3" style="width: 50px; height: 50px;"> <!-- Immagine album -->
+                <div>
+                    <div><strong>Titolo Brano</strong> - specifica brano</div> <!-- Titolo brano -->
+                    <div>Nome artista</div> <!-- Artista -->
+                </div>
+            </div>
+    
+            <!-- Sezione controlli di riproduzione -->
+            <div class="col-4 d-flex justify-content-center align-items-center">
                 <div class="controls">
-                    <i class="bi bi-shuffle"></i>
-                    <i class="bi bi-caret-left-fill"></i>
-                    <i class="bi bi-play-circle-fill"></i>
-                    <i class="bi bi-caret-right-fill"></i>
+                    <i class="bi bi-shuffle me-2"></i>
+                    <i class="bi bi-caret-left-fill me-2"></i>
+                    <i class="bi bi-play-circle-fill me-2 play-circle"></i>
+                    <i class="bi bi-caret-right-fill me-2"></i>
                     <i class="bi bi-repeat"></i>
                 </div>
-                <div class="d-flex gap-2">
+            </div>
+    
+            <!-- Sezione barra di progresso e controlli extra -->
+            <div class="col-4">
+                <!-- <div class="progress my-1" style="height: 5px;">
+                    <div class="progress-bar" role="progressbar" style="width: 50%;"></div> 
+                </div> -->
+                <div class="d-flex justify-content-end gap-2">
                     <i class="bi bi-collection-play"></i>
                     <i class="bi bi-display"></i>
                     <i class="bi bi-volume-up"></i>
@@ -140,6 +157,7 @@
             </div>
         </div>
     </div>
+    
 
 
 
