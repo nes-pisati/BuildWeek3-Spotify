@@ -82,9 +82,9 @@ main {
 }
 
 .controls i {
-    color: #fff; /* Colore di default delle icone */
-    cursor: pointer; /* Cambia il cursore quando passi sopra l'icona */
-    transition: color 0.3s; /* Rende il cambio di colore graduale */
+    color: #fff; 
+    cursor: pointer; 
+    transition: color 0.3s; 
   }
   
   .controls i:nth-child(3):hover {
