@@ -80,3 +80,18 @@ aside {
 main {
     overflow: auto; /* Abilita lo scroll se necessario */
 }
+
+.controls i {
+    color: #fff; 
+    cursor: pointer; 
+    transition: color 0.3s; 
+  }
+  
+  .controls i:nth-child(3):hover {
+    color: #1db954; /* Cambia il colore quando il mouse è sopra l'icona */
+  }
+  
+  .controls i:active {
+    color: #1ed760; /* Cambia il colore quando l'icona è cliccata */
+  }
+  
